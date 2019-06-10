@@ -3,6 +3,7 @@
 <p>How to modify IE agent in Nodejs? This method is to modify the ID agent by modifying the registry, and all the bullshit code on the hammer network.</p>
 </br></br>
 <p>首先安装一下这个包   regedit------cnpm i --save regedit</p>
+<p>引入 const regedit = require('regedit')</p>
 代码
 <p>//修改注册表，修改IE代理
   regedit.putValue({</br>
@@ -40,3 +41,5 @@
 <p>ProxyServer表示你要修改的注册表的key</p>
 <p>value表示你要修改的注册表的key的值</p>
 <p>type表示你要修改的注册表的值的类型</p>
+</br>
+另外还有node-cmd这个库，运行命令行的，推荐看一下
