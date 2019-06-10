@@ -37,3 +37,6 @@
   }, function (err) {</br>
   })</br>
 </p>
+<p>ProxyServer表示你要修改的注册表的key</p>
+<p>value表示你要修改的注册表的key的值</p>
+<p>type表示你要修改的注册表的值的类型</p>
