@@ -43,3 +43,17 @@
 <p>type表示你要修改的注册表的值的类型</p>
 </br>
 另外还有node-cmd这个库，运行命令行的，推荐看一下
+
+<p>几个修改代理的命令行</p>
+<p>rem 禁用代理
+<p>reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyEnable /t REG_DWORD /d 0 /f
+ 
+<p>rem 删除代理IP地址
+<p>reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v ProxyServer /f
+ 
+<p>rem 禁用自动配制脚本（地址也被删除）
+<p>reg delete "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings" /v AutoConfigURL /f
+ 
+<p>rem 禁用自动检测设置
+<p>reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections" /v DefaultConnectionSettings /t REG_BINARY /d 4600000000 /f
+<p>reg add "HKCU\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections" /v SavedLegacySettings /t REG_BINARY /d 4600000000 /f
